@@ -6,8 +6,8 @@ class Book(models.Model):
     ISBN = models.CharField(max_length=13)
     description = models.TextField()
     published_date= models.DateTimeField(auto_now_add=True)
-    total_copies = models.IntegerField()
-    available_copies = models.IntegerField()
+    total_copies = models.PositiveIntegerField()
+    available_copies = models.PositiveIntegerField()
 
     def __str__(self):
         return self.title
